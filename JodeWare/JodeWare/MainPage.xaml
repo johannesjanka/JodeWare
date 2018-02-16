@@ -2,10 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:JodeWare"
-             x:Class="JodeWare.MainPage">
+             x:Class="JodeWare.MainPage"
+             Title="JodeWare Inventory Management">
+    
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <Grid>
+        <StackLayout>
+            <Button Text="Button 1" Margin="5" HorizontalOptions="Center" BackgroundColor="Lavender"/>
+            <Button Text="Button 2" Margin="5" HorizontalOptions="Center" BackgroundColor="LightBlue"/>
+            <Button Text="Button 3" Margin="5" HorizontalOptions="Center" BackgroundColor="LightGreen"/>
+            <DatePicker/>
+            <TimePicker/>
+            <Slider/>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>
