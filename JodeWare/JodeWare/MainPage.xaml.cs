@@ -13,5 +13,16 @@ namespace JodeWare
 		{
 			InitializeComponent();
 		}
-	}
+
+        
+        private void Login_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void Register_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new RegisterPage());
+        }
+    }
 }
