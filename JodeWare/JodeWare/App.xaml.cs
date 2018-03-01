@@ -9,12 +9,26 @@ namespace JodeWare
 {
 	public partial class App : Application
 	{
+        static LieferantDB database;
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new JodeWare.MainPage();
+            //MainPage = new JodeWare.MainPage();
+            MainPage = new LieferantListPage();
 		}
+
+        public static LieferantDB Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new LieferantDB(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Lieferant.db3"));
+                }
+                return database;
+            }
+        }
 
 		protected override void OnStart ()
 		{
